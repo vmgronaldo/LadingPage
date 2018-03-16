@@ -159,57 +159,12 @@
                     }
                 }
                 .boton {
+
                     h1 {
                         padding: 0px 0px 0px 140px;
-                        button {
-                            position: relative;
-                            margin-top: 27px;
-                            display: inline-block;
-                            text-align: center;
-                            line-height: 1.2;
-                            max-width: 100%;
-                            border-style: solid;
-                            font-weight: 500;
-                            overflow: hidden;
-                            cursor: pointer;
-                            transition: .3s all ease;
-                            padding: 24px 24px;
-                            font-size: 17px;
-                            color: #787a7c;
-                            background: #fff;
-                            border-color: #eeeeee;
-                            padding-right: 93px;
-                            &::before {
-                                position: absolute;
-                                top: 0;
-                                bottom: 0;
-                                right: 58px;
-                                content: '';
-                                border-left: 2px solid #3f3545;
-                                transition: .4s all ease;
-                                font-size: 24.14px;
-                                padding-right: 10px;
-                                line-height: 0.70423em;
-                                border-color: #eeeeee;
-                            }
-                            &::after {
-                                position: absolute;
-                                top: 0;
-                                bottom: 0;
-                                right: 10px;
-                                font-size: 35px;
-                                line-height: 0.70423em;
-                                content: '\ea42';
-                                padding-right: 10px;
-                                padding-left: 10px;
-                                margin-left: 10px;
-                                line-height: 72px;
-                                color: white;
-                            }
-                            &:hover {
-                                background: #3f3545;
-                                color: white;
-                            }
+                        a {
+                          font-weight:bold !important;
+
                         }
                     }
                 }

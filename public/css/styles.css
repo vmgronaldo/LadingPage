@@ -294,58 +294,8 @@ body{
   padding:0 0 0 140px;
 }
 
-.container-main .main .conciertos .boton h1 button{
-  position:relative;
-  margin-top:27px;
-  display:inline-block;
-  text-align:center;
-  line-height:1.2;
-  max-width:100%;
-  border-style:solid;
-  font-weight:500;
-  overflow:hidden;
-  cursor:pointer;
-  transition:all .3s ease;
-  padding:24px;
-  font-size:17px;
-  color:#787a7c;
-  background:#fff;
-  border-color:#eee;
-  padding-right:93px;
-}
-
-.container-main .main .conciertos .boton h1 button:before{
-  position:absolute;
-  top:0;
-  bottom:0;
-  right:58px;
-  content:"";
-  border-left:2px solid #3f3545;
-  transition:all .4s ease;
-  font-size:24.14px;
-  padding-right:10px;
-  line-height:.70423em;
-  border-color:#eee;
-}
-
-.container-main .main .conciertos .boton h1 button:after{
-  position:absolute;
-  top:0;
-  bottom:0;
-  right:10px;
-  font-size:35px;
-  line-height:.70423em;
-  content:"\ea42";
-  padding-right:10px;
-  padding-left:10px;
-  margin-left:10px;
-  line-height:72px;
-  color:#fff;
-}
-
-.container-main .main .conciertos .boton h1 button:hover{
-  background:#3f3545;
-  color:#fff;
+.container-main .main .conciertos .boton h1 a{
+  font-weight:700 !important;
 }
 
 .container-main .main .lugares{
@@ -1125,6 +1075,61 @@ body{
 .foot-about .contact .redes ul li a:hover{
   opacity:.5;
   transition:all 1s ease;
+}
+
+.button{
+  position:relative;
+  margin-top:27px;
+  display:inline-block;
+  text-align:center;
+  line-height:1.2;
+  max-width:100%;
+  border-style:solid;
+  font-weight:500;
+  overflow:hidden;
+  cursor:pointer;
+  transition:all .3s ease;
+  padding:24px;
+  font-size:17px;
+  padding-right:93px;
+}
+
+.button.primary{
+  color:#787a7c;
+  background:#fff;
+  border-color:#eee;
+}
+
+.button.primary:before{
+  right:58px;
+  content:"";
+  border-left:2px solid #3f3545;
+  transition:all .4s ease;
+  font-size:24.14px;
+  border-color:#eee;
+}
+
+.button.primary:after,.button.primary:before{
+  position:absolute;
+  top:0;
+  bottom:0;
+  padding-right:10px;
+  line-height:.70423em;
+}
+
+.button.primary:after{
+  right:10px;
+  font-size:35px;
+  content:"\ea42";
+  padding-left:10px;
+  margin-left:10px;
+  line-height:72px;
+  color:#fff;
+}
+
+.button.primary:hover{
+  background:#3f3545;
+  color:#fff;
 }
 
 /*# sourceMappingURL=styles.css.map */
