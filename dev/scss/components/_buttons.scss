@@ -4,16 +4,21 @@
     display: inline-block;
     text-align: center;
     line-height: 1.2;
-    max-width: 100%;
     border-style: solid;
-    font-weight: 500;
     overflow: hidden;
     cursor: pointer;
     transition: .3s all ease;
     padding: 24px 24px;
     font-size: 17px;
     padding-right: 93px;
-
+    &.contact{
+      color:$blanco;
+      border-color: $blanco;
+      background: transparent;
+      &:hover {
+        color: darken($blanco,20);
+    }
+    }
     &.primary {
         color: #787a7c;
         background: #fff;

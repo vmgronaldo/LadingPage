@@ -16,7 +16,8 @@ block main
             span 04
             br
             span 86
-          div.flecha  
+          div.flecha 
+
   .container-main 
     .main 
       .conciertos 
@@ -78,9 +79,10 @@ block main
           .des
             h6 New Album Release
             h2 Travel Around My Soul
-            button INFORMACION
+            a(class="button primary icon-circle-right") INFORMACION
         .two
           span
+   
   .festivales
     .container-fes
       div(class="año") 2018
@@ -89,16 +91,17 @@ block main
           h2 Great American Country Music Festival         
           a(class="button primary icon-circle-right") INFORMACION
       .two
+
   .foot-about
     .about-main 
       .one  
       .two
         .des
-          h2 Shortly About 
-          
+          h2 Shortly About         
           h1 Mark Lamegon
           p Growing up in Kernersville, North Carolina, Mark Lamegon listened to all of the requisite country music staples: Alan Jackson, George Strait, Kenny Chesney and Garth Brooks. But as a child of the Nineties, he was also shaped by the smooth pop and R&B sounds of Greatest Country music artists,
           a(class="button primary icon-circle-right") INFORMACION
+        
     .store  
       .one
         h1 Goods From Store
@@ -116,8 +119,20 @@ block main
           img(src="img/polo3.png", alt="")
           h6 Men’s Merch
           a Fan’s T-Shirt
+        .box
+          img(src="img/polo3.png", alt="")
+          h6 Men’s Merch
+          a Fan’s T-Shirt
+
     .contact
       .api
+        h2 CONTACT
+        form(action="")
+          input(type="text" placeholder="Nombre")
+          input(type="text" placeholder="Email")
+          input(type="text" placeholder="Telefono")
+          textarea(type="text" placeholder="Asunto" name="", cols="30", rows="10")
+          button(class="button contact") ENVIAR
       .redes  
         p.copyright Mark Lamegon © 2018 | All Rights Reserved
         ul

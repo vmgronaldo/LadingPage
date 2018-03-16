@@ -1,14 +1,12 @@
-    .main-header {
-        text-align: center;
-        color: white;
-        background: #3e3343;
-        .hero {
+        /* MAIN */
+
+        .container-main {
             overflow: hidden;
             min-height: 100vh;
-            background-image: url(/img/hero-4.jpeg);
-            background-attachment: fixed;
+            background-image: url(/img/hero-3.jpeg);
             background-size: cover;
             background-position: center center;
+            background-attachment: fixed;
             position: relative;
             top: 0;
             left: 0;
@@ -16,858 +14,325 @@
             height: 100%;
             -o-object-fit: cover;
             object-fit: cover;
-            .container-head {
-                margin-right: auto;
-                margin-left: auto;
-                padding-left: 15px;
-                padding-right: 15px;
-                min-width: 300px;
-                max-width: 1200px;
-                .head-top {
-                    text-align: center;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    color: white;
-                    .marca {
-                        display: inline-block;
+            .main {
+                width: 100%;
+                margin: 0 0 0 auto; //border: 1px solid red;
+                @include desde($mediun) {
+                    width: 90%;
+                }
+                .conciertos {
+                    padding-top: 4em;
+                    padding-bottom: 4em;
+                    display: grid;
+                    background: $blanco;
+                    @include desde($mediun) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    .text {
+                        padding: 0px 20px;
+                        color: $morado;
                         font-family: $titulo, sans-serif;
-                        .slogan {
-                            font-size: 20px;
-                            text-transform: uppercase;
+                        @include desde($large) {
+                            padding: 0px 0px 0px 140px;
                         }
-                        .name {
-                            overflow: hidden;
-                            text-transform: none; // margin-top: 31px;
-                            font-size: 120px;
-                            line-height: 1;
-                            padding: 0px;
-                            a {
-                                color: white;
-                                text-decoration: none;
+                        h1,
+                        p {
+                            margin: 0px;
+                            font-size: 2.2em;
+                            @include desde($large) {
+                                font-size: 3em;
+                            }
+                        }
+                    }
+                    .boton {
+                        h1 {
+                            padding: 0 20px;
+                            margin: 0px;
+                            @include desde($large) {
+                                padding: 0px 0px 0px 140px;
+                            }
+                            a {}
+                        }
+                    }
+                }
+                .lugares {
+                    display: grid;
+                    grid-auto-rows: 250px;
+                    justify-content: center;
+                    @include desde($mediun) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    @include desde($large) {
+                        grid-template-columns: repeat(5, 1fr);
+                    }
+                    .box {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: center;
+                        img {
+                            display: block;
+                            margin-left: auto;
+                            margin-right: auto;
+                            width: 100%;
+                            height: 250px;
+                            transform: scale(1);
+                            transition: all 500ms ease-in-out;
+                            &:hover {
+                                transform: scale(1.2);
+                            }
+                        }
+                        .des {
+                            margin: 60px 0px;
+                            position: absolute;
+                            color: $blanco;
+                            z-index: 1000;
+                            text-align: center;
+                            font-family: $titulo, sans-serif;
+                            h1 {
+                                margin: 0px;
+                                font-size: 2.5em;
+                            }
+                            h3 {
+                                margin: 0px;
+                                font-size: 1.8em;
+                            }
+                        }
+                    }
+                }
+                .informacion {
+                    display: grid;
+                    @include desde($large) {
+                        height: 600px;
+                        grid-template-columns: repeat(2, 45% 55%);
+                    }
+                    .one {
+                        background-image: url(/img/travel.jpeg);
+                        background-size: cover;
+                        background-position: center center;
+                        &::after {
+                            position: absolute;
+                            display: inline-block;
+                            content: '';
+                            left: 96%;
+                            bottom:50%;
+                            width: 0px;
+                            height: 0px;
+                            border-style: solid;
+                            border-width: 20px 20px 20px 0;
+                            border-color: transparent $blanco transparent transparent;
+                            transition: .4s all ease;
+                            @include desde($mediun) {
+                                left: 98%;
+                                bottom: 58%;
+                            }
+                            @include desde($large) {
+                                left: 49.5%;
+                                bottom: 56%;
+                            }
+                        }
+                        .des {
+                            //border:1px solid red;
+                            width: 80%;
+                            margin: 100px auto;
+                            @include desde($large) {
+                                margin: 200px auto 0 auto;
+                            }
+                            .title {
+                                width: 50%;
+                                font-family: $titulo, sans-serif;
+                                h2 {
+                                    font-size: 2em;
+                                    margin: 0 0 20px 0px;
+                                    color: $blanco;
+                                    @include desde($large) {
+                                        font-size: 3em;
+                                    }
+                                }
+                            }
+                            .text {
+                                margin-top: 20px;
+                                background: $blanco;
+                                display: inline-block;
+                                padding: 20px;
+                                width: 280px;
+                                font-family: $titulo, sans-serif;
                                 p {
+                                    color: $morado;
+                                    font-size: 1.5em;
+                                    line-height: 1;
                                     margin: 0;
+                                    padding: 0px;
+                                    @include desde($large) {
+                                        font-size: 1.5em;
+                                    }
                                 }
                             }
                         }
                     }
-                    .fecha {
-                        font-size: 14px;
-                        line-height: 32px;
-                        position: relative;
-                        &::before {
-                            position: absolute;
-                            /* display: inline-block; */
-                            content: '';
-                            width: 97px;
-                            height: 1px;
-                            left: 50%;
-                            top: 50%;
-                            background: #fff;
-                            transform: translateX(-50%) translateY(-50%) rotate(45deg);
-                        }
-                        &::after {
-                            position: absolute;
-                            content: '';
-                            width: 97px;
-                            height: 1px;
-                            left: 50%;
-                            top: 50%;
-                            background: #fff;
-                            transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-                        }
-                    }
-                    span+span {
-                        font-size: 16px;
-                        margin-left: 44px;
-                    }
-                }
-                .flecha {
-                    font-size: 14px;
-                    line-height: 32px;
-                    position: relative;
-                    padding: 20px;
-                    width: 100px;
-                    margin: 50px auto;
-                    transition: all .25s;
-                    line-height: 66px;
-               
-                    cursor: pointer;
-                    &::before {
-                        position: absolute;
-                        content: '';
-                        width: 50px;
-                        height: 2px;
-                        left: 50%;
-                        top: 83%;
-                        background: #fff;
-                        transform: translateX(-83%) translateY(-83%) rotate(45deg);
-                        cursor: pointer;
-                    }
-                    &::after {
-                        cursor: pointer;
-                        position: absolute;
-                        content: '';
-                        width: 50px;
-                        height: 2px;
-                        left: 85%;
-                        top: 83%;
-                        background: #fff;
-                        transform: translateX(-83%) translateY(-83%) rotate(-45deg);
-                    }
-                }
-            }
-        }
-    }
-    /* MAIN */
-
-    .container-main {
-        overflow: hidden;
-        min-height: 100vh;
-        background-image: url(/img/hero-3.jpeg);
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-        .main {
-            width: 90%;
-            margin: 0 0 0 auto; //border: 1px solid red;
-            .conciertos {
-                padding-top: 4em;
-                padding-bottom: 4em;
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                background: white;
-                .text {
-                    padding: 0px 0px 0px 140px;
-                    color: #3e3343;
-                    font-family: $titulo, sans-serif;
-                    h1 {
-                        margin: 20px 0px 0px 0px;
-                        font-size: 3em;
-                    }
-                    p {
-                        margin: 0px 0px 20px 0px;
-                        font-size: 2.5em;
-                    }
-                }
-                .boton {
-
-                    h1 {
-                        padding: 0px 0px 0px 140px;
-                        a {
-                          font-weight:bold !important;
-
-                        }
-                    }
-                }
-            }
-            .lugares {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                grid-auto-rows: 250px;
-                justify-content: center;
-                .box {
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                    overflow: hidden;
-                    display: flex;
-                    justify-content: center;
-                    img {
-                        display: block;
-                        margin-left: auto;
-                        margin-right: auto;
-                        width: 100%;
-                        height: 250px;
-                        transform: scale(1);
-                        transition: all 500ms ease-in-out;
-                        &:hover {
-                            transform: scale(1.2);
-                        }
-                    }
-                    .des {
-                        margin: 60px 0px;
-                        position: absolute;
-                        color: white;
-                        z-index: 1000;
-                        text-align: center;
-                        font-family: $titulo, sans-serif;
-
-                        h1 {
-                            font-size: 3em;
-                            margin: 0px;
-
-                        }
-                        h3 {
-                            margin: 0px;
-                            font-size: 1.5em;
-                        }
-                    }
-                }
-            }
-            .informacion {
-                display: grid;
-                grid-template-columns: repeat(2, 45% 55%);
-                height: 600px;
-                .one {
-                    background-image: url(/img/travel.jpeg);
-                    background-size: cover;
-                    background-position: center center;
-                    &::after {
-                        position: absolute;
-                        display: inline-block;
-                        content: '';
-                        left: 49.5%;
-                        bottom: 57%;
-                        width: 0px;
-                        height: 0px;
-                        border-style: solid;
-                        border-width: 20px 20px 20px 0;
-                        border-color: transparent #fff transparent transparent;
-                        transition: .4s all ease;
-                    }
-                    .des {
-                        //border:1px solid red;
-                        width: 80%;
-                        margin: 200px auto 0 auto;
-                        .title {
-                            width: 50%;
-                            font-family: $titulo, sans-serif;
-
+                    .two {
+                        background: white; //border:1px solid black;
+                        .des {
+                            width: 80%;
+                            margin: 0px auto;
+                            display: grid;
+                            grid-template-columns: 1fr; // border:1px solid red;
+                            padding: 100px 0px;
+                            @include desde($large) {
+                                width: 60%;
+                            }
+                            @include desde($large) {
+                                padding-top: 200px;
+                                padding-bottom: 80px;
+                            }
+                            h6 {
+                                font-family: $texto, sans-serif;
+                                margin: 0px;
+                                font-size: 1.2em;
+                                color: $plomoo;
+                                @include desde($large) {
+                                    font-size: 1.5em;
+                                }
+                            }
                             h2 {
-                                font-size: 3em;
-                                margin: 0 0 20px 0px;
-                                color: white;
+                                font-family: $titulo, sans-serif;
+                                margin: 20px 0px 30px 0px;
+                                font-size: 2em;
+                                line-height: 1.05;
+                                color: $morado;
+                                @include desde($large) {
+                                    font-size: 3em;
+                                }
                             }
-                        }
-                        .text {
-                            margin-top: 20px;
-                            background: #fff;
-                            display: inline-block;
-                            padding: 20px;
-                            width: 280px;
-                            font-family: $titulo, sans-serif;
-
-                            p {
-                                color: #3e3343;
-                                font-size: 30px;
-                                line-height: 1;
-                                margin: 0;
-                                padding: 0px
-                            }
-                        }
-                    }
-                }
-                .two {
-                    background: white; //border:1px solid black;
-                    .des {
-                        width: 60%;
-                        margin: 0px auto;
-                        display: grid;
-                        grid-template-columns: 1fr; // border:1px solid red;
-                        padding-top: 200px;
-                        padding-bottom: 80px;
-                        h6 {
-                           font-family: $texto, sans-serif;
-                            margin: 0px;
-                            font-size: 26px;
-                            color: #d8d8d8;
-                        }
-                        h2 {
-                            font-family: $titulo, sans-serif;
-                           margin: 20px 0px 30px 0px;
-                            font-size: 60px;
-                            line-height: 1.05;
-                            color: #3e3343;
-
-                        }
-                        button {
-                            position: relative;
-                            display: inline-block;
-                            text-align: center;
-                            line-height: 1.2;
-                            width: 55%;
-                            border-style: solid;
-                            font-weight: 500;
-                            overflow: hidden;
-                            cursor: pointer;
-                            transition: .3s all ease;
-                            padding: 24px 24px;
-                            font-size: 17px;
-                            color: #787a7c;
-                            background: #fff;
-                            border-color: #eeeeee;
-                            padding-right: 93px;
-                            &::before {
-                                position: absolute;
-                                top: 0;
-                                bottom: 0;
-                                right: 58px;
-                                content: '';
-                                border-left: 2px solid #3f3545;
-                                transition: .4s all ease;
-                                font-size: 24.14px;
-                                padding-right: 10px;
-                                line-height: 0.70423em;
-                                border-color: #eeeeee;
-                            }
-                            &::after {
-                                position: absolute;
-                                top: 0;
-                                bottom: 0;
-                                right: 10px;
-                                font-size: 35px;
-                                line-height: 0.70423em;
-                                content: '\ea42';
-                                padding-right: 10px;
-                                padding-left: 10px;
-                                margin-left: 10px;
-                                line-height: 72px;
-                                color: white;
-                            }
-                            &:hover {
-                                background: #3f3545;
-                                color: white;
+                            a {
+                                width: 90%;
+                                @include desde($mediun) {
+                                    width: 50%;
+                                }
+                                @include desde($large) {
+                                    width: 60%;
+                                }
                             }
                         }
                     }
                 }
-            }
-            .sonido {
-                display: grid;
-                grid-template-columns: repeat(1, 100%);
-                background: #eeeeee;
-                height: 250px;
-                .click {
-                    width: 90%;
-                    margin: 40px auto;
-                    background: white;
-                    border-style: solid;
-                    background: #f5f5f5;
-                    border-color: #eeeeee;
-                    iframe {
-                        width: 100%;
-                        border: none;
-                    }
-                }
-            }
-            .viajes {
-                display: grid;
-                grid-template-columns: repeat(2, 45% 45%);
-                height: 600px;
-                .one {
-                    background: white;
-                    &::before {
-                        position: absolute;
-                        bottom: 13%;
-                        left: 50.5%;
-                        display: inline-block;
-                        content: ''; // top: 50%;
-                        margin-top: -12px; //left: -2px;
-                        width: 0;
-                        height: 0;
-                        border-style: solid;
-                        border-width: 11px 0 11px 13px;
-                        border-color: transparent transparent transparent #fff;
-                        transition: .4s all ease;
-                        z-index: 20;
-                    }
-                    .des {
-                        width: 70%;
-                        margin: 0px auto;
-                        display: grid;
-                        grid-template-columns: 1fr; // border:1px solid red;
-                        padding-top: 150px;
-                        padding-bottom: 80px;
-                        h6 {
-                            margin: 0px;
-                            font-size: 26px;
-                            color: #d8d8d8;
-                            font-family: $texto, sans-serif;
-
-                        }
-                        h2 {
-                            margin: 20px 0px 30px 0px;
-                            font-size: 60px;
-                            line-height: 1.05;
-                            color: #3e3343;
-                           font-family: $titulo, sans-serif;
-
-                        }
-                        button {
-                            position: relative;
-                            display: inline-block;
-                            text-align: center;
-                            line-height: 1.2;
-                            width: 60%;
-                            border-style: solid;
-                            font-weight: 500;
-                            overflow: hidden;
-                            cursor: pointer;
-                            transition: .3s all ease;
-                            padding: 24px 24px;
-                            font-size: 17px;
-                            color: #787a7c;
-                            background: #fff;
-                            border-color: #eeeeee;
-                            padding-right: 93px;
-                            &::before {
-                                position: absolute;
-                                top: 0;
-                                bottom: 0;
-                                right: 58px;
-                                content: '';
-                                border-left: 2px solid #3f3545;
-                                transition: .4s all ease;
-                                font-size: 24.14px;
-                                padding-right: 10px;
-                                line-height: 0.70423em;
-                                border-color: #eeeeee;
-                            }
-                            &::after {
-                                position: absolute;
-                                top: 0;
-                                bottom: 0;
-                                right: 10px;
-                                font-size: 35px;
-                                line-height: 0.70423em;
-                                content: '\ea42';
-                                padding-right: 10px;
-                                padding-left: 10px;
-                                margin-left: 10px;
-                                line-height: 72px;
-                                color: white;
-                            }
-                            &:hover {
-                                background: #3f3545;
-                                color: white;
-                            }
-                        }
-                    }
-                }
-                .two {
-                    position: relative;
-                    background-image: url(/img/v1.jpeg);
-                    background-size: cover;
-                    background-position: center center;
-                    span {
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        bottom: 0;
-                        right: 0;
-                        background: url(/img/you.png) 50% 50% no-repeat;
-                        transition: .4s all ease;
-                        background-size: 100px;
-                        &:hover {
-                            opacity: .5;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .festivales {
-        overflow-x: hidden;
-        background: #eeeeee;
-        position: relative;
-        background: #eeeeee;
-        .container-fes {
-            width: 80%;
-            margin: 0px auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            height: 600px;
-            .año {
-              font-family: $titulo, sans-serif;
-                position: absolute;
-                font-size: 400px;
-                line-height: 1.4;
-                text-indent: 340px;
-                text-align: center;
-                top: 0;
-                -webkit-transform: translateY(0%);
-                transform: translateY(0%);
-                right: 50px;
-                color: white;
-                left: -2%;
-                z-index: 100;
-            }
-            .one {
-                .des {
-                    width: 80%;
-                    margin: 0px auto 0px 0px;
+                .sonido {
                     display: grid;
-                    grid-template-columns: 1fr; // border:1px solid red;
-                    padding-top: 120px;
-                    padding-bottom: 80px;
-                    position: relative;
-                    z-index: 100;
-                    h2 {
-                        margin: 20px 0px 30px 0px;
-                        font-size: 60px;
-                        line-height: 1.05;
-                        color: #3e3343;
-                        font-family: $titulo, sans-serif;
-                    }
-                    button {
-                        position: relative;
-                        display: inline-block;
-                        text-align: center;
-                        line-height: 1.2;
-                        width: 60%;
+                    grid-template-columns: repeat(1, 100%);
+                    background: $plomo;
+                    height: 250px;
+                    .click {
+                        width: 90%;
+                        margin: 40px auto;
+                        background: $blanco;
                         border-style: solid;
-                        font-weight: 500;
-                        overflow: hidden;
-                        cursor: pointer;
-                        transition: .3s all ease;
-                        padding: 24px 24px;
-                        font-size: 17px;
-                        color: #787a7c;
-                        background: #fff;
-                        border-color: #eeeeee;
-                        padding-right: 93px;
+                        background: $blanco;
+                        border-color: $blanco;
+                        iframe {
+                            width: 100%;
+                            border: none;
+                        }
+                    }
+                }
+                .viajes {
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
+                    @include desde($large) {
+                        height: 600px;
+                        grid-template-columns: repeat(2, 45% 45%);
+                        grid-template-rows: none;
+                    }
+                    .one {
+                        background: white;
                         &::before {
                             position: absolute;
-                            top: 0;
-                            bottom: 0;
-                            right: 58px;
-                            content: '';
-                            border-left: 2px solid #3f3545;
+                            bottom: 6%;
+                            left: 0%;
+                            display: inline-block;
+                            content: ''; // top: 50%;
+                            margin-top: -12px; //left: -2px;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 11px 0 11px 13px;
+                            border-color: transparent transparent transparent #fff;
                             transition: .4s all ease;
-                            font-size: 24.14px;
-                            padding-right: 10px;
-                            line-height: 0.70423em;
-                            border-color: #eeeeee;
+                            z-index: 20;
+                            @include desde($mediun) {
+                            display: none;
+                          }
+                            @include desde($large) {
+                              display: block;
+                              bottom: 16%;
+                              left: 50.5%;
+                          }
                         }
-                        &::after {
-                            position: absolute;
-                            top: 0;
-                            bottom: 0;
-                            right: 10px;
-                            font-size: 35px;
-                            line-height: 0.70423em;
-                            content: '\ea42';
-                            padding-right: 10px;
-                            padding-left: 10px;
-                            margin-left: 10px;
-                            line-height: 72px;
-                            color: white;
+                        .des {
+                          width: 80%;
+                            margin: 0px auto;
+                            display: grid;
+                            grid-template-columns: 1fr; // border:1px solid red;
+                            padding: 100px 0px;
+                            @include desde($large) {
+                                padding-top: 150px;
+                                padding-bottom: 80px;
+                            }
+                            h6 {
+                                margin: 0px;
+                                font-size: 1.2em;
+                                color: $plomoo;
+                                font-family: $texto, sans-serif;                          
+                                @include desde($large) {
+                                  font-size: 1.5em; 
+                              }
+                            }
+                            h2 {
+                                margin: 20px 0px 30px 0px;
+                                font-size: 2em;
+                                line-height: 1.05;
+                                color: $morado;
+                                font-family: $titulo, sans-serif;
+
+                                @include desde($large) {
+                                  font-size: 3em; 
+                              }
+                            }
+                            a {
+                                width: 90%;
+                                @include desde($mediun) {
+                                  width: 50%;
+
+                              }
+                              @include desde($large) {
+                                width: 60%;
+
+                            }
+
+                            }
                         }
-                        &:hover {
-                            background: #3f3545;
-                            color: white;
-                        }
                     }
-                }
-            }
-            .two {
-                position: relative;
-                z-index: 10;
-                background-image: url(/img/v3.jpeg);
-                max-width: 1200px;
-                margin-right: -440px;
-                left: 7px;
-            }
-        }
-    }
-
-    .foot-about {
-        min-height: 250vh;
-        background-image: url(/img/p5.jpeg);
-        background-size: cover;
-        background-position: center center;
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-        .about-main {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            height: 100vh;
-            .one {
-                background: transparent;
-            }
-            .two {
-                background: white;
-                &::after {
-                    position: absolute;
-                    display: inline-block;
-                    content: '';
-                    left: 49%;
-                    bottom: 79%;
-                    width: 0px;
-                    height: 0px;
-                    border-style: solid;
-                    border-width: 20px 20px 20px 0;
-                    border-color: transparent #fff transparent transparent;
-                    transition: .4s all ease;
-                }
-                .des {
-                    width: 70%;
-                    margin: 0px auto;
-                    display: grid;
-                    grid-template-columns: 1fr; // border:1px solid red;
-                    padding-top: 120px;
-                    padding-bottom: 80px;
-                    position: relative;
-                    z-index: 100;
-                    font-family: $titulo, sans-serif;
-
-                    h1 {
-                        margin: 0px;
-                        font-size: 60px;
-                        line-height: 1.05;
-                        color: #3e3343;
-                    }
-                    h2 {
-                        margin: 0px;
-                        font-size: 50px;
-                        line-height: 1.05;
-                        color: #c6c6c6;
-                    }
-                    P {
-                        padding-right: 30px;
-                        color: #c6c6c6;
-                        margin: 70px 0px;
-                        line-height: 1.5;
-                        font-family: $texto, sans-serif;
-
-                    }
-                    button {
+                    .two {
                         position: relative;
-                        display: inline-block;
-                        text-align: center;
-                        line-height: 1.2;
-                        width: 50%;
-                        border-style: solid;
-                        font-weight: 500;
-                        overflow: hidden;
-                        cursor: pointer;
-                        transition: .3s all ease;
-                        padding: 24px 24px;
-                        font-size: 17px;
-                        color: #787a7c;
-                        background: #fff;
-                        border-color: #eeeeee;
-                        padding-right: 93px;
-                        &::before {
+                        background-image: url(/img/v1.jpeg);
+                        background-size: cover;
+                        background-position: 50%;
+                        span {
                             position: absolute;
+                            left: 0;
                             top: 0;
                             bottom: 0;
-                            right: 58px;
-                            content: '';
-                            border-left: 2px solid #3f3545;
+                            right: 0;
+                            background: url(/img/you.png) 50% 50% no-repeat;
                             transition: .4s all ease;
-                            font-size: 24.14px;
-                            padding-right: 10px;
-                            line-height: 0.70423em;
-                            border-color: #eeeeee;
-                        }
-                        &::after {
-                            position: absolute;
-                            top: 0;
-                            bottom: 0;
-                            right: 10px;
-                            font-size: 35px;
-                            line-height: 0.70423em;
-                            content: '\ea42';
-                            padding-right: 10px;
-                            padding-left: 10px;
-                            margin-left: 10px;
-                            line-height: 72px;
-                            color: white;
-                        }
-                        &:hover {
-                            background: #3f3545;
-                            color: white;
+                            background-size: 100px;
+                            &:hover {
+                                opacity: .5;
+                            }
                         }
                     }
                 }
             }
         }
-        .store {
-          width: 90%;
-          margin: 0px 0px 0px auto;
-          background: #ededed;
-          display: grid;
-          grid-template-columns: 1fr;
-
-          .one{
-            width: 90%;
-            margin: 50px 100px;
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-            height:100px;
-         
-            h1{
-              font-size: 60px;
-              line-height: 1;
-              color: #3f3545;
-              font-family: $texto, sans-serif;
-
-            }
-
-            button {
-              position: relative;
-              display: inline-block;
-              text-align: center;
-              line-height: 1.2;
-              width: 50%;
-              height: 80px;
-              border-style: solid;
-              font-weight: 500;
-              overflow: hidden;
-              cursor: pointer;
-              transition: .3s all ease;
-              padding: 24px 24px;
-              font-size: 17px;
-              color: #787a7c;
-              background: #fff;
-              border-color: #eeeeee;
-              padding-right: 93px;
-              margin:auto; 
-              &::before {
-                  position: absolute;
-                  top: 0;
-                  bottom: 0;
-                  right: 58px;
-                  content: '';
-                  border-left: 2px solid #3f3545;
-                  transition: .4s all ease;
-                  font-size: 24.14px;
-                  padding-right: 10px;
-                  line-height: 0.70423em;
-                  border-color: #eeeeee;
-              }
-              &::after {
-                  position: absolute;
-                  top: 0;
-                  bottom: 0;
-                  right: 10px;
-                  font-size: 35px;
-                  line-height: 0.70423em;
-                  content: '\ea42';
-                  padding-right: 10px;
-                  padding-left: 10px;
-                  margin-left: 10px;
-                  line-height: 72px;
-                  color: white;
-              }
-              &:hover {
-                  background: #3f3545;
-                  color: white;
-              }
-          }
-          }
-          
-          .two{
-            width: 90%;
-            margin: 0 auto;
-            display:grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            justify-content: center;
-            height:500px;
-            padding: 50px 0px;
-            grid-gap: 20px;
-        
-           
-            .box{
-              text-align: center;
-              width: 300px;
-              height: 300px;
-              margin: 0 auto;
-              border:2px solid white;
-              padding: 20px;
-              font-family: $texto, sans-serif;
-
-              img{
-                width: 100%;
-              }
-              h6{
-                font-size: 18px;
-                line-height: 1.66;
-                color:#9d98a0;
-                margin: 20px;
-                
-              }
-
-              a{
-                font-size: 30px;
-                line-height: 1;
-                color:#3e3343;
-                font-weight: bold;
-                cursor: pointer;
-              }
-            }
-          }
-        }
-
-        .contact{
-        width: 80%;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 100px 0 0 0;
-
-
-          .api{
-            //background: red;
-
-
-          }
-          .redes{
-
-            color:white;
-            p{
-text-align: center;
-font-family: $texto, sans-serif;
-            }
-
-            ul{
-              list-style: none;
-              display: flex;
-              flex-flow: wrap;
-              justify-content: center;
-              padding: 0px;
-              li{
-             
-                margin: 0 10px;
-
-                a{
-
-                  color:white;
-                  font-size: 36px;
-                  text-decoration: none;
-
-                  width: 200px;
-                  height: 200px;
-                  border:1px solid white;
-                  padding: 10px;
-                  transition: 1s all ease;
-
-
-                  &:hover{
-                    opacity: .5;
-                    transition: 1s all ease;
-                  }
-
-                }
-              }
-            }
-
-          }
-        }
-    }
+        /* MAIN */

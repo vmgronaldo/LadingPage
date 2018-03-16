@@ -1,0 +1,9 @@
+@mixin desde($size){
+	@media screen and(min-width:$size){
+		@content;
+	}
+}
+
+$small:480px;
+$mediun:768px;
+$large:1024px;

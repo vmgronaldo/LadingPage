@@ -1,0 +1,290 @@
+/* C */
+
+.foot-about {
+    min-height: 150vh;
+    background-image: url(/img/p5.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    .about-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        @include desde($mediun) {
+            grid-template-columns: 30% 1fr;
+        }
+        @include desde($large) {
+            grid-template-columns: 1fr 1fr;
+        }
+        .one {
+            background: transparent;
+        }
+        .two {
+            background: $blanco;
+            &::after {
+                position: absolute;
+                display: inline-block;
+                content: '';
+             
+                width: 0px;
+                height: 0px;
+                border-style: solid;
+                border-width: 20px 20px 20px 0;
+                border-color: transparent $blanco transparent transparent;
+                transition: .4s all ease;
+                display: none;
+
+                @include desde($mediun) {
+                  display:block;
+                  left: 27.5%;
+                  bottom: 85%;
+                }
+                @include desde($large) {
+                  display:block;
+                  left: 49%;
+                bottom: 79%;
+                }
+            }
+            .des {
+                width: 75%;
+                margin: 0px auto;
+                display: grid;
+                grid-template-columns: 1fr; // border:1px solid red;
+                padding: 40px 0;
+                position: relative;
+                z-index: 100;
+                font-family: $titulo, sans-serif;
+                @include desde($mediun) {
+                    width: 80%;
+                    padding-top: 120px;
+                    padding-bottom: 80px;
+                }
+                h1 {
+                    margin: 0px;
+                    font-size: 2em;
+                    line-height: 1.05;
+                    color: $morado;
+                    @include desde($mediun) {
+                        font-size: 3em;
+                    }
+                }
+                h2 {
+                    margin: 0px;
+                    font-size: 1.5em;
+                    line-height: 1.05;
+                    color: $plomoo;
+                    @include desde($mediun) {
+                        font-size: 3em;
+                    }
+                }
+                P {
+                    padding-right: 30px;
+                    margin: 0px;
+                    color: darken($plomoo, 20);
+                    padding: 20px 0 0 0px;
+                    line-height: 1.5;
+                    font-family: $texto, sans-serif;
+                    @include desde($mediun) {
+                        width: 80%;
+                        padding: 50px 0px;
+                    }
+                }
+                a {
+                    width: 100%;
+                    @include desde($mediun) {
+                        width: 60%;
+                    }
+                    @include desde($large) {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .store {
+        width: 100%;
+        background: $plomo;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0px 0px 50px 0px;
+        @include desde($large) {
+          width: 90%;
+          margin: 0px 0px 0px auto;
+        }
+        .one {
+            width: 90%;
+            margin: 50px auto 0px auto;
+            display: grid;
+            @include desde($large) {
+              margin: 50px 100px;
+                grid-template-columns: 1fr 1fr;
+            }
+            h1 {
+                font-size: 2em;
+                line-height: 1;
+                color: $morado;
+                font-family: $texto, sans-serif;
+                margin: 10px 0px;
+                @include desde($large) {
+                  font-size: 3em;
+                }
+            }
+            a {
+                width: 80%;
+                height: 80px;
+                @include desde($mediun) {
+                  width: 55%;
+                }
+                @include desde($large) {
+                  margin-left:50px;
+
+                }
+            }
+        }
+        .two {
+            width: 90%;
+            margin: 0 auto;
+            display: grid;
+            justify-content: center;
+            height: auto;
+            padding: 50px 0px;
+            grid-gap: 20px;
+            @include desde($mediun) {
+              grid-template-columns: repeat(2, 1fr);
+            }
+            @include desde($large) {
+              padding: 0px 0px;
+              grid-template-columns: repeat(4, 1fr);
+            }
+            .box {
+                text-align: center;
+                width: 100%;
+                border: 2px solid $blanco;
+                padding: 20px;
+                font-family: $texto, sans-serif;
+                img {
+                    width: 100%;
+                }
+                h6 {
+                    font-size: 18px;
+                    line-height: 1.66;
+                    color: lighten($morado, 10);
+                    margin: 20px;
+                }
+                a {
+                    font-size: 30px;
+                    line-height: 1;
+                    color: $morado;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .contact {
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        padding: 0 0 0 0;
+        @include desde($large) {
+          grid-gap: 2em;
+          grid-template-columns: 1fr 1fr;
+        }
+        .api {
+            //background: red;
+            // border:1px solid $blanco;
+            h2 {
+                color: $blanco;
+                font-size: 48px;
+                font-family: $titulo, sans-serif;
+                margin-bottom: 0;
+            }
+            form {
+                margin-bottom: 50px;
+                display: grid;
+                input,
+                textarea,
+                button {
+                    font-family: $texto, sans-serif;
+                    border: 1px solid $blanco;
+                    font-weight: bold;
+                    padding: 20px;
+                    width: 100%;
+                    margin: 10px 0;
+                    height: 50px;
+                }
+                input:focus,
+                textarea:focus,
+                button:focus {
+                    outline: 0px;
+                    border: 2px solid #3e3343;
+                }
+                input,
+                textarea {
+                    background: transparent;
+                    color: $blanco;
+                }
+                input::placeholder {
+                    color: $blanco;
+                }
+                textarea::placeholder {
+                    color: $blanco;
+                }
+                textarea {
+                    height: 100px;
+                }
+                button {
+                    padding: 0;
+                    margin: 0;
+                    width: 50%;
+                }
+            }
+        }
+        .redes {
+            color: $blanco;
+            padding: 20px 0px;
+
+            @include desde($large) {
+              padding: 200px 0px;
+            }
+            p {
+                text-align: center;
+                font-family: $texto, sans-serif;
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                flex-flow: wrap;
+                justify-content: center;
+                padding: 0px;
+                li {
+                    margin: 20px 10px;
+                    a {
+                        color: $blanco;
+                        font-size: 36px;
+                        text-decoration: none;
+                        width: 200px;
+                        height: 200px;
+                        border: 1px solid $blanco;
+                        padding: 10px;
+                        transition: 1s all ease;
+                        &:hover {
+                            opacity: .5;
+                            transition: 1s all ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*    /* MAIN */

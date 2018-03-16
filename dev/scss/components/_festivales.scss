@@ -1,0 +1,92 @@
+  /* festivales */
+
+  .festivales {
+      position: relative;
+      overflow: hidden;
+      background: $plomo;
+      .container-fes {
+          width: 80%;
+          margin: 0px auto;
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          @include desde($mediun) {
+              height: 600px;
+              grid-template-columns: repeat(2, 50% 50%);
+              grid-template-rows: none;
+          }
+          .año {
+              font-family: $titulo, sans-serif;
+              position: absolute;
+              font-size: 5em;
+              line-height: 1.4;
+              text-indent: 340px;
+              text-align: center;
+              top: 100%;
+              left: -30%;
+              transform: translateY(0%);
+              right: 50px;
+              color: $blanco;
+              z-index: 100;
+              transform: rotate(-90deg);
+              @include desde($mediun) {
+                  font-size: 10em;
+                  transform: rotate(0deg);
+                  top: 0;
+                  left: -5%;
+                  transform: translateY(0%);
+                  display: block;
+                  left: -40%;
+              }
+              @include desde($large) {
+                  left: -2%;
+                  font-size: 18em;
+              }
+          }
+          .one {
+              .des {
+                  width: 100%;
+                  margin: 0px auto 0px 0px;
+                  display: grid;
+                  grid-template-columns: 1fr; // border:1px solid red;
+                  padding: 40px 0px;
+                  position: relative;
+                  z-index: 100;
+                  @include desde($mediun) {
+                      width: 95%;
+                      padding: 150px 0px;
+                  }
+                  @include desde($large) {
+                      padding-top: 120px;
+                      padding-bottom: 80px;
+                      width: 80%;
+                  }
+                  h2 {
+                      margin: 20px 0px 30px 0px;
+                      font-size: 2em;
+                      line-height: 1.05;
+                      color: $morado;
+                      font-family: $titulo, sans-serif;
+                      @include desde($large) {
+                          font-size: 3em;
+                      }
+                  }
+                  a {
+                      width: 100%;
+                      @include desde($large) {
+                          width: 60%;
+                      }
+                  }
+              }
+          }
+          .two {
+              position: relative;
+              z-index: 10;
+              background-image: url(/img/v3.jpeg);
+              background-size: cover;
+              background-position: 80%;
+              margin-right: -440px;
+              left: 7px;
+          }
+      }
+  }
+  /* festivales */
