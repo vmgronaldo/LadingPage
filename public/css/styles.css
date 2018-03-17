@@ -906,11 +906,11 @@ body{
   left:7px;
 }
 .foot-about{
-  min-height:150vh;
+  overflow:hidden;
   background-image:url(/img/p5.jpeg);
+  background-attachment:fixed;
   background-size:cover;
   background-position:50%;
-  background-attachment:fixed;
   position:relative;
   top:0;
   left:0;

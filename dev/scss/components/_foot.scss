@@ -1,18 +1,18 @@
 /* C */
 
 .foot-about {
-    min-height: 150vh;
-    background-image: url(/img/p5.jpeg);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
+  overflow: hidden;
+  background-image: url(/img/p5.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
     .about-main {
         display: grid;
         grid-template-columns: 1fr;
